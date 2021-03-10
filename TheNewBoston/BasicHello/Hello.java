@@ -1,4 +1,4 @@
-package TheNeBoston.BasicHello;
+package TheNewBoston.BasicHello;
 
 public class Hello {
     public static void main(String args[]) {
