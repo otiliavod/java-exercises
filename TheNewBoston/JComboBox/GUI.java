@@ -1,4 +1,6 @@
 package TheNewBoston.JComboBox;
+
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,7 +10,7 @@ public class GUI extends JFrame{
      *
      */
     private static final long serialVersionUID = 1L;
-    private JComboBox box;
+    private JComboBox <String> box;
     private JLabel picture;
 
     private static String[] filename = {"a.jpg", "b.jpg"};
@@ -18,7 +20,7 @@ public class GUI extends JFrame{
         super("Title");
         setLayout(new FlowLayout());
 
-        box = new JComboBox(filename);
+        box = new JComboBox<String>(filename);
 
         box.addItemListener(
             new ItemListener() {
@@ -35,3 +37,4 @@ public class GUI extends JFrame{
         add(picture);
     }
 }
+
