@@ -13,7 +13,7 @@ public class Main {
         System.out.print("N = ");
         N = sc.nextInt();
 
-        for(int i=0; i < N; i++) { // restul numerelor pana la N
+        for(int i=0; i < N; i++) { 
             System.out.print("a = ");
             a = sc.nextInt();
             suma = suma + a;
