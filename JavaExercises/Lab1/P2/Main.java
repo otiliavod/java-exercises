@@ -1,5 +1,5 @@
 /* Se citesc de la tastatura N numere intregi. Sa se calculeze media
- lor aritmetica.*/
+ lor aritmetica. */
 
 package JavaExercises.Lab1.P2;
 import java.util.*;
