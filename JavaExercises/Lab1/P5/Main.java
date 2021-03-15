@@ -6,36 +6,35 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int N, x1, x2, x0;
-        Scanner sc= new Scanner(System.in);
+        int N;
+        Scanner sc = new Scanner(System.in);
         System.out.print("N = ");
         N = sc.nextInt();
-        System.out.print("x1 = ");
-        x1 = sc.nextInt();
-        System.out.print("x2 = ");
-        x2 = sc.nextInt();
-        System.out.print("x0 = ");
-        x0 = sc.nextInt();
+
+        int nr2;
+        int nr0 = 0;
+        int nr1 = 1;
 
         boolean este = false;
 
-        // n = (n-2) + (n-1)
-
-        for(int i = 1; i < N; i++) {
-            x2 = x1 + x0;
-            x0 = x1;
-            x1 = x2;
-            if(x2 == N) {
-                este = true;
-                break;
+        if (N != 0) {
+            for (int i = 1; i <= N; i++) {
+                nr2 = nr1 + nr0;
+                nr0 = nr1;
+                nr1 = nr2;
+                if (nr2 == N) {
+                    este = true;
+                    break;
+                }
             }
+        } else {
+            este = true;
         }
 
-        if(este) {
-            System.out.println("Este termen");
-        }
-        else {
-            System.out.println("Nu este termen");
+        if (este) {
+            System.out.println("Este");
+        } else {
+            System.out.println("Nu este");
         }
         sc.close();
     }
