@@ -17,21 +17,21 @@ public class Main {
         System.out.print("x0 = ");
         x0 = sc.nextInt();
 
-        boolean termen = false;
+        boolean este = false;
 
         // n = (n-2) + (n-1)
 
-        for(int i = 3; i < N; i++) {
+        for(int i = 1; i < N; i++) {
             x2 = x1 + x0;
             x0 = x1;
             x1 = x2;
             if(x2 == N) {
-                termen = true;
+                este = true;
                 break;
             }
         }
 
-        if(termen) {
+        if(este) {
             System.out.println("Este termen");
         }
         else {
