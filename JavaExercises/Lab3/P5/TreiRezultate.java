@@ -47,7 +47,7 @@ public class TreiRezultate {
         }
 
         int suma = x + y + z;
-        int medie = suma / 3;
+        double medie = suma / 3;
 
         Triplet t = new Triplet();
         t.a = max;
