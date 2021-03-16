@@ -12,14 +12,16 @@ public class Lista {
 
     // Class Lista Additions:
 
-    public double media(int N) {
+    public double media() {
         int suma = 0;
+        int contor = 0;
         Nod nodCrt = head;
         while(nodCrt != null) {
             suma = suma + nodCrt.nr;
             nodCrt = nodCrt.next;
+            contor++;
         }
-        return suma / N;
+        return suma / contor;
     }
 
     public boolean suntCrescatoare() {
