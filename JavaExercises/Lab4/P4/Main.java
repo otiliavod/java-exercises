@@ -35,7 +35,7 @@ public class Main {
             }
         }
 
-        System.out.println(val + " apare de " + max + " ori");
+        System.out.println(val + " apare de " + max + " ori ");
         sc.close();
     }
 }
