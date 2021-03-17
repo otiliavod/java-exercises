@@ -1,7 +1,7 @@
 /* Scrieti o aplicatie in care se implementeaza algoritmul de 
 cautare binara a prezentei unui numar x citit de la tastatura 
 intr-un vector sortat crescator. Vectorul se citste de la 
-tastatura.*/
+tastatura*/
 
 package JavaExercises.Lab4.PS5;
 import java.util.*;
