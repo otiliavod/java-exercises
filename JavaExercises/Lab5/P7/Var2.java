@@ -1,11 +1,7 @@
-/* Se citeste de la tastatura un numar natural N. Se citesc N numere intregi intr-un vector a. Sa se copieze
-toate numere din vectorul a intr-o matrice patrata b de dimensiune corespunzatoare. Spatiile eventual neocupate
-din matrice se vor completa cu valoarea -1.*/
-
 package JavaExercises.Lab5.P7;
 import java.util.*;
 
-public class Main {
+public class Var2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("N = ");
@@ -16,11 +12,12 @@ public class Main {
             System.out.print("nr = ");
             a[k] = sc.nextInt();
         }
+        int M = N % 2 == 0? N/2 : (N + 1) / 2;
 
-        int b[][] = new int[N][N];
+        int b[][] = new int[M][M];
         int k = 0;
-        for(int i=0; i<N; i++) {
-            for(int j=0; j<N; j++) {
+        for(int i=0; i<M; i++) {
+            for(int j=0; j<M; j++) {
                 if(k != N) {
                     b[i][j] = a[k];
                     k++;
@@ -31,8 +28,8 @@ public class Main {
             }
         }
 
-        for(int i=0; i<N; i++) {
-            for(int j=0; j<N; j++) {
+        for(int i=0; i<M; i++) {
+            for(int j=0; j<M; j++) {
                 System.out.print(b[i][j] + " ");
             }
             System.out.println();
