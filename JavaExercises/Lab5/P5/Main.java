@@ -35,13 +35,15 @@ public class Main {
         }
 
         int max = contor[0];
+        int l = 0;
         for(int i=0; i<N; i++) {
             if(contor[i] > max) {
                 max = contor[i];
+                l = i;
             }
         }
 
-        System.out.println("Linia cu cele mai multe numere prime este: " + max);
+        System.out.println("Linia cu cele mai multe numere prime este: " + l);
         sc.close();
     }
 }
