@@ -44,5 +44,6 @@ public class Cuvinte_2 {
         }
 
         System.out.println("Cel mai frecvent: " + cuvinte[indexMaxim]);
+        System.out.println("Numar de apariti: " + contorMaxim);
     }    
 }
