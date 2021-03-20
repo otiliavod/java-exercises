@@ -7,25 +7,27 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        String s1 = JOptionPane.showInputDialog("Sir: ");
+        String s1 = JOptionPane.showInputDialog("Sir: ").toUpperCase();
         String s2 = "";
 
         for(int i=0; i<s1.length(); i++) {
-            s2 = s2 + s1.replace(s1.charAt(i), (char) (s1.charAt(i) + 3));
             if((s1.charAt(i) == 'X') || (s1.charAt(i) == 'Y') || (s1.charAt(i) == 'Z')) {
                 switch(s1.charAt(i)) {
                     case 'X':
-                    s2 = s2 + s1.replace('X', 'A');
+                    s2 = s2 + 'A';
                     break;
 
                     case 'Y':
-                    s2 = s2 + s1.replace('Y', 'B');
+                    s2 = s2 + 'B';
                     break;
-
+                                       
                     case 'Z':
-                    s2 = s2 + s1.replace('Z', 'C');
+                    s2 = s2 + 'C';
                     break;
                 }
+            }
+            else{ 
+                s2 = s2 + (char)(s1.charAt(i) + 3);
             }
         }
 
