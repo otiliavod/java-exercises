@@ -28,11 +28,14 @@ public class Test {
                 x = sc.nextInt();
                 System.out.print("Latimea dreptunghiului: ");
                 y = sc.nextInt();
+                f[i] = new Dreptunghi(x, y);
             }
         }
 
         for(int i=0; i<N; i++) {
             System.out.println("Obiectul din " + f[i].getClass() + " are aria: " + f[i].arie() + " si perimtrul: " + f[i].perimetru());
         }
+
+        sc.close();
     }
 }
