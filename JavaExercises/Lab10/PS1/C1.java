@@ -37,5 +37,7 @@ public class C1 {
         System.out.println("Cele mai mici doua elemente: ");
         System.out.print(it.next() + " ");
         System.out.println(it.next());
+
+        sc.close();
     }
 }
