@@ -54,22 +54,4 @@ public class Umbrela_Addition {
     public void afisare() {
         System.out.println("Culoare: " + culoare);
     }
-
-    public void calcul(int N) {
-        long rezultat;
-        for(int i=1; i<=N; i++) {
-            for(int j=1; j<=N; j++) {
-                for(int k=1; k<=N; k++) {
-                    rezultat = i*j*k;
-                }
-            }
-        }
-    }
-
-    public long durataCalcul(int N) {
-        long t1 = System.currentTimeMillis();
-        calcul(N);
-        long t2 = System.currentTimeMillis();
-        return(t2-t1);
-    }
 }
