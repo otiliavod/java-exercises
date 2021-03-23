@@ -4,42 +4,49 @@ import java.io.*;
 
 public class Utest {
     public static void main(String[] args) throws IOException {
-        int N = 4;
+        int N = 2000;
         ArrayList<Umbrela_Addition> al_u = new ArrayList<>();
         String culori[] = {"negru", "verde", "albastru", "galben"};
         Random r = new Random();
 
         for(int i=0; i<N; i++) {
-            al_u.add(new Umbrela_Addition(culori[r.nextInt(N)], 25*(i+1)));
+            al_u.add(new Umbrela_Addition(culori[r.nextInt(4)], 25*(i+1)));
         }
         afisareColectie(al_u);
         scoatePrimulElement(al_u);
+        System.out.println();
         afisareColectie(al_u);
-        durata(al_u, N);
-
+        long time1 = durata(al_u, N, 25);
+        System.out.println(time1);
+        
         System.in.read();
 
         System.out.println("Colectia Vector: ");
         Vector<Umbrela_Addition> v_u = new Vector<>();
         for(int i=0; i<N; i++) {
-            v_u.add(new Umbrela_Addition(culori[r.nextInt(N)], 20*(i+1)));
+            v_u.add(new Umbrela_Addition(culori[r.nextInt(4)], 20*(i+1)));
         }
         afisareColectie(v_u);
         scoatePrimulElement(v_u);
+        System.out.println();
         afisareColectie(v_u);
-        durata(v_u, N);
+        long time2 = durata(v_u, N, 20);
+        System.out.println(time2);
         
         System.in.read();
 
         System.out.println("Colectia LinkedList: ");
         LinkedList<Umbrela_Addition> l_u = new LinkedList<>();
         for(int i=0; i<N; i++) {
-            l_u.add(new Umbrela_Addition(culori[r.nextInt(N)], 30*(i+1)));
+            l_u.add(new Umbrela_Addition(culori[r.nextInt(4)], 30*(i+1)));
         }
         afisareColectie(l_u);
         scoatePrimulElement(l_u);
+        System.out.println();
         afisareColectie(l_u);
-        durata(l_u, N);
+        long time3 = durata(l_u, N, 30);
+        System.out.println(time3);
+        
     }
 
     private static void afisareColectie(List<Umbrela_Addition> l) {
@@ -55,7 +62,17 @@ public class Utest {
         l.remove(index);
     }
 
-    private static long durata(List<Umbrela_Addition> l, int N) {
-        return ((Umbrela_Addition) l).durataCalcul(N);
+    private static long durata(List<Umbrela_Addition> l, int N, int nr) {
+        String culori[] = {"negru", "verde", "albastru", "galben"};
+        Random r = new Random();
+        long t1 = System.currentTimeMillis();
+        for(int i=0; i<N; i++) {
+            l.add(new Umbrela_Addition(culori[r.nextInt(4)], nr*(i+1)));
+        }
+        afisareColectie(l);
+        scoatePrimulElement(l);
+        afisareColectie(l);
+        long t2 = System.currentTimeMillis();
+        return (t2-t1);
     }
 }
