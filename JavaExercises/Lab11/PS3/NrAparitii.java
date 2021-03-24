@@ -26,6 +26,7 @@ public class NrAparitii {
                 }
                 contor[cod] ++;
             }
+            fr.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
