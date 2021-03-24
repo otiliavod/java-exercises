@@ -43,6 +43,7 @@ public class NumarMaxim {
             }
             fr.close();
             bfr.close();
+            System.out.println("Maxim: " + max);
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
