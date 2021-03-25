@@ -16,25 +16,20 @@ public class Main {
             fw = new FileWriter("linie.txt");
             bfw = new BufferedWriter(fw);
             bfr = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Sir: ");
+            String s = bfr.readLine();
+            bfw.write(s);
+            fr = new FileReader(s);
 
-            for(;;) {
-                System.out.print("Sir: ");
-                String s = bfr.readLine();
-                bfw.write(s);
-                fr = new FileReader(s);
-                StringTokenizer tk = new StringTokenizer(s);
-                int n = tk.countTokens();
-
-                for(int i=0; i<n; i++) {
-                    char c = s.charAt(i);
-                    bfw.write(c);
-                    bfw.newLine();
-                }
-                fr.close();
-                bfw.close();
-                bfr.close();
-                fw.close();
+            for(int i=0; i<s.length(); i++) {
+                char c = s.charAt(i);
+                bfw.write(c);
+                bfw.newLine();
             }
+            fr.close();
+            bfw.close();
+            bfr.close();
+            fw.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
