@@ -6,7 +6,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileInputStream fi = null;
         String numeF = JOptionPane.showInputDialog("Nume: ");
         int contor = 0;
@@ -23,10 +23,12 @@ public class Main {
                     contor ++;
                 }
             }
-            fi.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fi.close();
         }
         System.out.println("Numarul de valori nule: " + contor);
     }
