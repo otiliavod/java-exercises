@@ -1,4 +1,4 @@
-/* Citim de la tastatura o propozitie. Sa se copieze fiecare cuvand din propozitie
+/* Citim de la tastatura o propozitie. Sa se copieze fiecare cuvant din propozitie
 in fisierul text cuvinte.txt, cate un cuvant pe fiecare linie din fisier.*/
 
 package JavaExercises.Lab12.P4;
@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader bfr = null;
         FileWriter fw = null;
         BufferedWriter bfw = null;
@@ -24,12 +24,14 @@ public class Main {
                 bfw.write(cuvantCrt);
                 bfw.newLine();
             }
-            fw.close();
-            bfw.close();
-            bfr.close();
         } catch (IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally{
+            fw.close();
+            bfw.close();
+            bfr.close();
         }
     }
 }
