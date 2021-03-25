@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileReader fr = null;
         FileWriter fw = null;
         BufferedReader bfr = null;
@@ -16,7 +16,7 @@ public class Main {
             fr = new FileReader("test1.txt");
             bfr = new BufferedReader(fr);
             fw = new FileWriter("test2.txt");
-
+           
             for(;;) {
                 String s = bfr.readLine();
                 if(s == null) {
@@ -30,12 +30,14 @@ public class Main {
                     fw.write(cMare);
                 }
             }
-            fr.close();
-            bfr.close();
-            fw.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fr.close();
+            bfr.close();
+            fw.close();
         }
     }
 }
