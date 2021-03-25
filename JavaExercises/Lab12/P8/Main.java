@@ -1,4 +1,4 @@
-/* Sa se afiseze daca toate numere dintr-un fisier binar de numere intregi sunt
+/* Sa se afiseze daca toate numerele dintr-un fisier binar de numere intregi sunt
 in progresie aritmetica sau nu. Numele fisierului se va citi de la tastatura.*/
 
 package JavaExercises.Lab12.P8;
@@ -6,7 +6,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileInputStream fi = null;
         String numeF = JOptionPane.showInputDialog("Nume fisier: ");
         final int N = 100;
@@ -23,10 +23,12 @@ public class Main {
                 int nr = cod;
                 a[i] = nr;
             }
-            fi.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fi.close();
         }
 
         int r = a[1] - a[0];
