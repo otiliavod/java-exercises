@@ -23,7 +23,8 @@ public class Main {
                 if(cod == -1) {
                     break;
                 }
-                a[i] = cod;
+                int nr = cod;
+                a[i] = nr;
             }
             fi.close();
         } catch(IOException e) {
