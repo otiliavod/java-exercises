@@ -6,7 +6,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileInputStream fi = null;
         String numeF = JOptionPane.showInputDialog("Nume fisier: ");
         int max = 0;
@@ -24,10 +24,12 @@ public class Main {
                     max = nr;
                 }
             }
-            fi.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fi.close();
         }
         System.out.println("Maximul: " + max);
     }
