@@ -9,7 +9,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileInputStream fi = null;
         String numeF = JOptionPane.showInputDialog("Nume: ");
         final int N = 100;
@@ -26,10 +26,12 @@ public class Main {
                 int nr = cod;
                 a[i] = nr;
             }
-            fi.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fi.close();
         }
 
         for(int i=0; i<N-1; i++) {
