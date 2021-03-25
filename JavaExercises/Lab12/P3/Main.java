@@ -6,7 +6,7 @@ package JavaExercises.Lab12.P3;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         final int DIM = 10;
         BufferedReader bfr = null;
         FileWriter fw = null;
@@ -29,12 +29,14 @@ public class Main {
                     bfw.newLine();       
                  }
             }
-            fw.close();
-            bfw.close();
-            bfr.close();
         } catch(IOException e) {
             System.out.println(e);
             System.exit(1);
+        }
+        finally {
+            fw.close();
+            bfw.close();
+            bfr.close();
         }
     }
 }
