@@ -12,6 +12,6 @@ public class Array {
         FereastraP1 f = new FereastraP1(N);
         f.pack(); //
         f.setLocationRelativeTo(null); 
-        f.setVisible(true);
+        f.setVisible(true); 
     }
 }

@@ -63,15 +63,11 @@ public class FereastraP1 extends JFrame{
                 System.exit(1);
             }
             else if(sursa == jbMaxim) {
-                String s = jtf1[N].getText();
-                int x[] = new int[N];
+                int max = Integer.parseInt(jtf1[0].getText());
                 for(int i=0; i<N; i++) {
-                    x[i] = Integer.parseInt(s);
-                }
-                int max = x[0];
-                for(int i=1; i<N; i++) {
-                    if(x[i] > max) {
-                        max = x[i];
+                    int nrCrt = Integer.parseInt(jtf1[i].getText());
+                    if(nrCrt > max) {
+                        max = nrCrt;
                     }
                 }
                 jtf2.setText(("" + max));
