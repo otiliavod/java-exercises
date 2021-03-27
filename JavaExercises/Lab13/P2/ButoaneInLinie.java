@@ -13,6 +13,6 @@ public class ButoaneInLinie {
         FereastraP2 f = new FereastraP2();
         f.pack(); 
         f.setLocationRelativeTo(null); 
-        f.setVisible(true);
+        f.setVisible(true); 
     }
 }
