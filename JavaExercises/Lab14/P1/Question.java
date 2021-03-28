@@ -1,4 +1,4 @@
-// package JavaExercises.Lab14.P1;
+package JavaExercises.Lab14.P1;
 
 public class Question {
     String question;

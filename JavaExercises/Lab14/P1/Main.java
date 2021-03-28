@@ -13,7 +13,7 @@ fiecare intrebare, pe langa cele trei variante de raspuns si numarul raspunsului
 corect la acea intrebare(prima varianta de raspuns are numarul 0). Numarul de
 intrebari din fisier este variabil.*/
 
-// package JavaExercises.Lab14.P1;
+package JavaExercises.Lab14.P1;
 
 public class Main {
     public static void main(String[] args) {
